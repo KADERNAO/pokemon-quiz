@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Pokémon</title>
+</head>
+<body>
+    <header>
+        <h1>Quiz Pokémon</h1>
+        <p>Teste seus conhecimentos sobre Pokémon!</p>
+        <button id="theme-toggle">Mudar Tema</button>
+    </header>
+    <div class="container">
+        <div class="question" id="question"></div>
+        <div class="flashcard" id="flashcard">
+            <div class="front">
+                <div class="symbol">❓</div> <!-- Símbolo de interrogação -->
+            </div>
+            <div class="back">
+                <img src="" alt="Pokémon" class="pokemon-img" id="pokemon-image">
+                <div class="answer" id="answer"></div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button id="prev">Anterior</button>
+            <button id="flip">Virar Flashcard</button>
+            <button id="next">Próximo</button>
+        </div>
+        <div id="feedback"></div>
+        <div class="counter" id="counter"></div> <!-- Contador de perguntas -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Pokémon Quiz By: Nicolas André e Allan José 2 ano B</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

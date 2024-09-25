@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB, #F0E68C);
+    color: #333;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    padding: 20px;
+    background-color: #ffcc00;
+    border-bottom: 5px solid #ff9900;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.flashcard {
+    width: 400px; /* Aumentando a largura do card */
+    height: 300px; /* Aumentando a altura do card */
+    perspective: 1000px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 20px;
+    transition: transform 0.6s;
+}
+
+.front {
+    background-color: #f0e68c; /* Cor de fundo da frente do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; /* Tamanho do símbolo de interrogação */
+}
+
+.back {
+    background-color: #ffd700; /* Cor de fundo da parte de trás do card */
+    transform: rotateY(180deg);
+    flex-direction: column; /* Alinha imagem e resposta em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.flashcard.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .back {
+    transform: rotateY(0);
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #ffcc00;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para o tema escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #555;
+    border-bottom: 5px solid #777;
+}
+
+body.dark-mode button {
+    background-color: #666;
+}
+
+body.dark-mode button:hover {
+    background-color: #888;
+}
+
+/* Estilo para centralizar imagens e texto */
+.pokemon-img {
+    width: 80%; /* Ajuste o tamanho da imagem para caber no card */
+    max-width: 200px; /* Tamanho máximo da imagem */
+    display: block;
+    margin: 10px auto; /* Centraliza a imagem com espaçamento */
+}
+
+.question {
+    font-size: 20px; /* Tamanho da fonte da pergunta */
+    text-align: center; /* Centraliza o texto da pergunta */
+    margin-bottom: 10px; /* Espaço abaixo da pergunta */
+}
+
+.answer {
+    font-size: 20px; /* Tamanho da fonte da resposta */
+    text-align: center; /* Centraliza o texto da resposta */
+    margin-top: 10px; /* Espaçamento acima da resposta */
+}
+
+.counter {
+    font-size: 18px; /* Tamanho do contador */
+    margin-top: 10px; /* Espaçamento acima do contador */
+}
